@@ -1,7 +1,7 @@
-const mongoose = rerquire('mongoose');
+const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema({
-    image : String,
+    image : Buffer,
     name : String,
     price : String,
     discount : {
@@ -14,4 +14,4 @@ const productSchema = mongoose.Schema({
 
 })
 
-module.exports = mongoose.module("product", productSchema);
+module.exports = mongoose.model("product", productSchema);
