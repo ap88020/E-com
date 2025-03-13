@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
         return res.redirect('/');
     }
         let decode = jwt.verify(req.cookies.token, process.env.JWT_KEY);
-        console.log("Decoded Token:", decode); // Debugging
+        // console.log("Decoded Token:", decode); // Debugging
 
         let user = await userModel.findOne({ email: decode.email }).select("-password");
 

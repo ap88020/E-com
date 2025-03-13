@@ -6,10 +6,10 @@ const dbgr = require('debug')("development:mongoose");
 mongoose
 .connect(`${config.get("MONGODB_URI")}/E-com`)
 .then(() => {
-    dbgr("mongoose connected");
+    console.log("mongoose connected");
 })
 .catch((err) => {
-    dbgr(err);
+    console.log(err);
 })
 
 
