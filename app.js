@@ -6,8 +6,11 @@ const productRouter = require('./routes/products.Routes');
 const index = require('./routes/index.routes');
 const expresSession = require('express-session');
 const flash = require('connect-flash'); 
+const multer = require('multer');
+const crypto = require('crypto');
 
 const db = require('./config/mongoose-connections');
+
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
